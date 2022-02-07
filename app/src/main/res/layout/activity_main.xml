@@ -243,8 +243,8 @@
 
     <Button
         android:id="@+id/btnSuma"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:backgroundTint="#FDDA03"
         android:text="+"
         android:textSize="34sp"
@@ -325,4 +325,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
