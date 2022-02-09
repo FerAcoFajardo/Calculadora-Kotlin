@@ -62,10 +62,15 @@ class MainActivity : AppCompatActivity() {
         // Obtener el texto
         val operacion = txtOperacion.text.toString()
         // Extraer el operador
-        val operador = operacion.substring(operacion.length - 1)
+        try{
+            val operador = operacion.substring(operacion.length - 1)
+            operacion(operador)
+            limpiar(R.id.txtOperacion)
+        }
+        catch (e: Exception){
 
-        operacion(operador)
-        limpiar(R.id.txtOperacion)
+        }
+
     }
 
     private fun precionarOperador(operador: String) {
@@ -105,6 +110,7 @@ class MainActivity : AppCompatActivity() {
         // Limpiar el text view
         if(id == R.id.txtResultado){
             tv.text = "0"
+
         } else {
             tv.text = ""
         }
@@ -147,6 +153,9 @@ class MainActivity : AppCompatActivity() {
                 val valor1 = tvOperacion.text.toString()
                 val resultado = valor1.toDouble() / valor.toDouble()
                 tvResultado.text = resultado.toString()
+            }
+            else -> {
+                tvResultado.text = "0"
             }
         }
 
